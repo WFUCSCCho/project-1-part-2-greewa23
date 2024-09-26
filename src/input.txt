@@ -1,25 +1,27 @@
 
-insert 111
-             insert 23
-
-insert 99
-insert         4
-
+insert Hawaii    1303-080   Haleakala  US  Island 20.708 -156.25    3050  Shield    historical D4
+   insert     Hawaii   1303-080   Hualalai  US  Island 19.692   -155.87     25231  Shield    historical D3
+ insert     Hawaii   1303-080   Loihi  US  Island 18.92   -155.27 -975  Submarine    historical D3
+       insert     Hawaii   Kilauea  US  Island 19.692   -155.87     25240  Shield    historical D3
+       insert   1303-09-  Hawaii   Kilauea  US USA  Island 19.692   -155.87     25240  Shield    historical D3
+insert Hawaii Hualalai US 99
 isEmpty
 
-    insert     111
+insert Iceland       1702-07= Hekla Iceland    Iceland-S 63.983 -19.666     1494    Stratovolcano Historical D1
+
+
+search Hawaii    1303-080   Helen  US  Island 20.708 -156.25    3050  Shield    historical D4
+search Hawaii    1303-080   Haleakala  US  Island 20.708 -156.25    3050  Shield    historical D4
+search Hawaii    1303-080   Mauna  US  Island 20.708 -156.25    3050  Shield    historical D4
 
 print
 
+    remove Hawaii  1303-080   Hualalai  US  Island 19.692   -155.87 25231  Shield historical     D3
 
-search 9
+remove Hawaii    1303-080   Haleakala  US  Island 20.708 -156.25    3050  Shield    historical D4
+remove Hawaii    1303-080   Helen  US  Island 20.708 -156.25    3050  Shield    historical D4
+ remove     Hawaii   1303-080   Lo  US  Island 18.92   -155.27 -975  Submarine    historical D3
+isEmpty volcano
 
-remove 23
-
-remove 4
-remove 999999
-isEmptyasfh
-print
-
-insert 123
+insert Mexico 1401-03=    Ceboruco Mexico Mexico    21.125   -104.508   2281 Stratovolcano Historical D3
 print

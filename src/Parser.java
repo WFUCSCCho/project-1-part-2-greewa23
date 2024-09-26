@@ -150,7 +150,7 @@ public class Parser {
             }
             //Update v with the data.
             v = new Volcano(data.get(0), data.get(1), data.get(2), data.get(3), data.get(4),
-                    Double.parseDouble(data.get(5)), Double.parseDouble(data.get(6)), Integer.parseInt(data.get(7)), data.get(8), data.get(9));
+                    Double.parseDouble(data.get(5)), Double.parseDouble(data.get(6)), Integer.parseInt(data.get(7)), data.get(8), data.get(9), data.get(10));
         }
         //Determine which command is being used.
         switch (command[0]) {
@@ -179,7 +179,6 @@ public class Parser {
             }
             // default case for Invalid Command
             default -> {
-                System.out.println("hey");
                 writeToFile("Invalid Command", "./result.txt");
             }
         }

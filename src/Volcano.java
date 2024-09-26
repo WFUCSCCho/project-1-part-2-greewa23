@@ -17,10 +17,8 @@ public class Volcano implements Comparable<Volcano> {
     private Integer elevation; //Elevation in meters
     private String type; //Type of volcano
     private String status; //Current status of the volcano
+    private String lastKnownEruption;
 
-    /*
-C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\volcanoes_around_the_world_in_2021.csv
-     */
 
     //Default constructor
     public Volcano() {
@@ -34,11 +32,12 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
         this.elevation = 0;
         this.type = "";
         this.status = "";
+        this.lastKnownEruption = "";
     }
 
     //Parametrized constructor
     public Volcano(String region, String number, String name, String country, String location, Double latitude, Double longitude,
-                   Integer elevation, String type, String status) {
+                   Integer elevation, String type, String status, String lastKnownEruption) {
         this.region = region;
         this.number = number;
         this.name = name;
@@ -49,6 +48,7 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
         this.elevation = elevation;
         this.type = type;
         this.status = status;
+        this.lastKnownEruption = lastKnownEruption;
     }
 
     //Copy constructor
@@ -63,6 +63,7 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
         this.elevation = v.elevation;
         this.type = v.type;
         this.status = v.status;
+        this.lastKnownEruption = v.lastKnownEruption;
     }
 
     //This method prints out the string representation of the object.
@@ -70,7 +71,7 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
         String data = "";
         data += "(" + number + "/ "+country+") " +  name + " [region: " + region + ", location: "
                 + location + ", latitude: " + latitude + ", longitude: " + longitude + ", elevation: "
-                + elevation + ", type: " + type + ", status: " + status;
+                + elevation + ", type: " + type + ", status: " + status + ", Last Known Eruption: " + lastKnownEruption;
         return data;
     }
 
@@ -98,6 +99,8 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
             return false;
         if(!this.status.equals(v.status))
             return false;
+        if(!this.lastKnownEruption.equals(v.lastKnownEruption))
+            return false;
         return true;
     }
 
@@ -110,7 +113,7 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
         //If the objects are equal, check their other fields.
         if(x==0) {
             if(!this.equals(obj))
-                return 1;
+                return -1;
             return 0;
         }
         else {
@@ -160,6 +163,10 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
         return status;
     }
 
+    public String getLastKnownEruption() {
+        return lastKnownEruption;
+    }
+
     //The following are the setter methods for each variable.
     public void setRegion(String region) {
         this.region = region;
@@ -199,5 +206,8 @@ C:\Users\wynne\IdeaProjects\project-1-part-2-greewa23\src\input.txt C:\Users\wyn
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    public void setLastKnownEruption(String lastKnownEruption) {
+        this.lastKnownEruption = lastKnownEruption;
     }
 }
